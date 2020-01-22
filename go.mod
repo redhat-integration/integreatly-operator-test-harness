@@ -1,4 +1,4 @@
-module github.com/meowfaceman/prow-operator-test-harness
+module github.com/psturc/integreatly-operator-test-harness
 
 go 1.13
 

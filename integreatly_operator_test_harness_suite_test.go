@@ -1,28 +1,28 @@
-package prow_operator_test_harness
+package integreatly_operator_test_harness
 
 import (
 	"path/filepath"
 	"testing"
 
-	"github.com/meowfaceman/prow-operator-test-harness/pkg/metadata"
 	. "github.com/onsi/ginkgo"
 	"github.com/onsi/ginkgo/reporters"
 	. "github.com/onsi/gomega"
+	"github.com/psturc/integreatly-operator-test-harness/pkg/metadata"
 
-	_ "github.com/meowfaceman/prow-operator-test-harness/pkg/tests"
+	_ "github.com/psturc/integreatly-operator-test-harness/pkg/tests"
 )
 
 const (
 	testResultsDirectory = "/test-run-results"
-	jUnitOutputFilename  = "junit-prow-operator.xml"
+	jUnitOutputFilename  = "junit-integreatly-operator.xml"
 	addonMetadataName    = "addon-metadata.json"
 )
 
-func TestProwOperatorTestHarness(t *testing.T) {
+func TestIntegreatlyOperatorTestHarness(t *testing.T) {
 	RegisterFailHandler(Fail)
 	jUnitReporter := reporters.NewJUnitReporter(filepath.Join(testResultsDirectory, jUnitOutputFilename))
 
-	RunSpecsWithDefaultAndCustomReporters(t, "Prow Operator Test Harness", []Reporter{jUnitReporter})
+	RunSpecsWithDefaultAndCustomReporters(t, "Integreatly Operator Test Harness", []Reporter{jUnitReporter})
 
 	err := metadata.Instance.WriteToJSON(filepath.Join(testResultsDirectory, addonMetadataName))
 	if err != nil {
