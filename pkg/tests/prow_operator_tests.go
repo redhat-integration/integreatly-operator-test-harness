@@ -3,7 +3,7 @@ package tests
 import (
 	"github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/psturc/integreatly-operator-test-harness/pkg/metadata"
+	"github.com/integr8ly/integreatly-operator-test-harness/pkg/metadata"
 	"k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/rest"

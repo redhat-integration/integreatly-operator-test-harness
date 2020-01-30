@@ -7,9 +7,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	"github.com/onsi/ginkgo/reporters"
 	. "github.com/onsi/gomega"
-	"github.com/psturc/integreatly-operator-test-harness/pkg/metadata"
+	"github.com/integr8ly/integreatly-operator-test-harness/pkg/metadata"
 
-	_ "github.com/psturc/integreatly-operator-test-harness/pkg/tests"
+	_ "github.com/integr8ly/integreatly-operator-test-harness/pkg/tests"
 )
 
 const (
