@@ -17,12 +17,12 @@ var _ = ginkgo.Describe("Integreatly Operator Tests", func() {
 		panic(err)
 	}
 
-	ginkgo.It("installations.integreatly.org CRD exists", func() {
+	ginkgo.It("rhmis.integreatly.org CRD exists", func() {
 		apiextensions, err := clientset.NewForConfig(config)
 		Expect(err).NotTo(HaveOccurred())
 
 		// Make sure the CRD exists
-		_, err = apiextensions.ApiextensionsV1beta1().CustomResourceDefinitions().Get("installations.integreatly.org", v1.GetOptions{})
+		_, err = apiextensions.ApiextensionsV1beta1().CustomResourceDefinitions().Get("rhmis.integreatly.org", v1.GetOptions{})
 
 		if err != nil {
 			metadata.Instance.FoundCRD = false
