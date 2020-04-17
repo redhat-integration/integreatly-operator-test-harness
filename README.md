@@ -1,2 +1,2 @@
-# integreatly-operator-test-harness
+# rhi-operator-test-harness
 
