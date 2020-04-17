@@ -1,4 +1,4 @@
-module github.com/integr8ly/integreatly-operator-test-harness
+module github.com/redhat-integration/rhi-operator-test-harness
 
 go 1.13
 
